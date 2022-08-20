@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 function Skills() {
   const [skills, setSkills] = useState([])
@@ -17,7 +18,7 @@ function Skills() {
               <div class="card-body">
                 <h5 class="card-title"> {item.name} </h5>
                 {/* <p class="card-text"> {item.description} </p> */}
-                <a href="#" class="btn btn-primary">Learn about</a>
+                <Link to={`/skills/${item.id}`} class="btn btn-primary">Learn about</Link>
               </div>
           </div>
         </div>
